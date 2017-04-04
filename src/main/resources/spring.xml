@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        <!--xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">-->
+<beans>
+    <bean id="shape" class="com.study.Triangle" >
+        <property name="pointA" ref="pointA" />
+        <property name="pointB" ref="pointB" />
+        <property name="pointC" ref="pointC" />
+    </bean>
+
+    <bean id="pointA" class="com.study.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="pointB" class="com.study.Point">
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="pointC" class="com.study.Point">
+        <property name="x" value="20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="circle" class="com.study.Circle" >
+        <property name="center" ref="pointA" />
+    </bean>
+    <!--</bean>
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <context:annotation-config/>-->
+</beans>
+
+<!--    0, 0
+    -20, 0
+    0, 20-->
